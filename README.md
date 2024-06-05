@@ -4,23 +4,29 @@ Welcome to the Book Store, an ecommerce website specializing in books. This proj
 This ecommerce website is designed to provide users with a seamless online shopping experience. The website allows users to browse through various products, add them to their cart, and checkout securely.
 
 
-**Features**
+# Features 
 
-User registration and login
-Product catalog with search functionality
-Shopping cart and checkout
-Payment processing using Stripe
-Admin dashboard for managing products and orders
 
-**Technologies Used**
+- User registration and login
+- Product catalog with search functionality
+- Shopping cart and checkout
+- Admin dashboard for managing products and orders
+- Easy to use
 
-Django: a Python web framework for building web applications
-HTML: a markup language used for creating web pages
-CSS: a styling language used for designing the appearance of web pages
-JavaScript: a programming language used for creating interactive web experiences
-SQLite3: a lightweight database management system
 
-**Contact**
+# Technologies Used
 
-If you have any questions, feel free to contact me at sinhaaman655@gmail.com.
+- Django: a Python web framework for building web applications
+- HTML: a markup language used for creating web pages
+- CSS: a styling language used for designing the appearance of web pages
+- JavaScript: a programming language used for creating interactive web experiences
+- SQLite3: a lightweight database management system
+
+
+## Contact
+
+If you have any questions, feel free to contact me at [sinhaaman655@gmail.com](mailto:sinhaaman655@gmail.com).
+
+
+
 Aman Sinha ® sinhaaman655@gmail.com
