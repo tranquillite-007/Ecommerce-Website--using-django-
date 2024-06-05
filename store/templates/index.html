@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Book Store</h1>
+    <p>We have a wide selection of books for all ages and interests.</p>
+    <p>Browse our <a href="{% url 'products' %}">products</a> page to see what we have available.</p>
+{% endblock %}
