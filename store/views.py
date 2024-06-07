@@ -40,3 +40,11 @@ class BookDetail(DetailView):
     model = Book
     template_name = 'book_detail.html'
 
+#class for search functionality using users queries
+def search(request):
+    query = request.GET.get('q')
+    product = Book.objects.filter(name__icontains=query)
+    return render(request, 'search.html', {'product': product})
+    
+
+

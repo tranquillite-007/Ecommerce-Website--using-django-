@@ -13,5 +13,5 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('profile/', views.profile, name='profile'),
     path('books/<int:pk>/', views.BookDetail.as_view(), name='book_detail'),
-
+    path('search/', views.search, name='search'),
 ]

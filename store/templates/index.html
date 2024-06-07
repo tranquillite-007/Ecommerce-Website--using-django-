@@ -3,7 +3,27 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Welcome to My Book Store</h1>
-    <p>We have a wide selection of books for all ages and interests.</p>
-    <p>Browse our <a href="{% url 'products' %}">products</a> page to see what we have available.</p>
+    <div class="hero">
+        <div class="intro">
+            <h1>Welcome to My Book Store</h1>
+            <p>We have a wide selection of books for all ages and interests.</p>
+            <p>Browse our <a href="{% url 'products' %}">products</a> page to see what we have available.</p>
+            <form class="search-form" method="get" action="{% url 'products' %}">
+                <input class="search-input" type="search" name="q" placeholder="Search" aria-label="Search">
+                <button class="search-button" type="submit">Search</button>
+            </form> 
+        </div>
+        <div class="image">
+            <img src="https://plus.unsplash.com/premium_vector-1682298733507-e1988018a5e1?bg=FFFFFF&q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="logo">
+                <h3>Book Store</h3>
+                <h6>on Top</h6>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
 {% endblock %}

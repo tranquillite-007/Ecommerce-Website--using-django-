@@ -131,6 +131,8 @@ nav ul li a:hover{
 }
 
 
+/* css for footer to position it at bottom of the website and when it reaches the bottom of the page */
+
 footer{
     position: fixed;
     bottom: 0;
