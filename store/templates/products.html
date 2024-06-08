@@ -4,16 +4,18 @@
 
 {% block content %}
     <h1>Products</h1>
-    <div class="row">
+    <div class="box_container">
         {% for book in books %}
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.title }}">
+        <div class="card_box">
+            <div class="card">
+                <img src="{{ MEDIA_URL }}{{ book.image.url }}" class="card-img" alt="{{ book.title }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ book.title }}</h5>
-                    <p class="card-text">{{ book.author }}</p>
-                    <p class="card-text">Price: ${{ book.price }}</p>
-                    <a href="{% url 'product_detail' book.pk %}" class="btn btn-primary">View Details</a>
+                    <div class="TP">
+                        <p class="card-text">{{ book.author }}</p>
+                        <p class="card-text">${{ book.price }}</p>
+                    </div>
+                    <a href="{% url 'product_detail' book.pk %}" class="btn">View Details</a>
                 </div>
             </div>
         </div>

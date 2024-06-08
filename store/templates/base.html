@@ -6,34 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <h1>Book Store</h1>
-        </div>
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'products' %}">Products</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-        {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-        </ul>
-        {% else %}
-        <div class="btn_box">
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a class="btn" href="{% url 'register' %}">Register</a></li>
-        </div>
-        {% endif %}
+        <nav class="nav-container">
+            <div class="logo">
+                <h2>Book Store</h2>
+            </div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+            {% else %}
+            <div class="btn_box">
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a class="btn" href="{% url 'register' %}">Register</a></li>
+            </div>
+            {% endif %}
+        </nav>
     </nav>
     <div class="container">
         {% block content %}
         {% endblock %}
+        {% block products %}
+        {% endblock %}
     </div>
-    <footer>
-        &copy; 2022 My Book Store
+
+    <footer class="footer">
+        <div class="container5">
+            <div class="row">
+                <div class="cols">
+                    <div class="footer-col">
+                        <h4>Book Store</h4>
+                        <ul>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'products' %}">Products</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Authors</h4>
+                        <ul>
+                            <li><a href="#">Author 1</a></li>
+                            <li><a href="#">Author 2</a></li>
+                            <li><a href="#">Author 3</a></li>
+                            <li><a href="#">Author 4</a></li>
+                            <li><a href="#">Author 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="footer-col">
+                        <h4>Genre</h4>
+                        <ul>
+                            <li><a href="#">Fantasy</a></li>
+                            <li><a href="#">Science Fiction</a></li>
+                            <li><a href="#">Romance</a></li>
+                            <li><a href="#">Horror</a></li>
+                            <li><a href="#">Thriller</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="logo">
+                            <h4>Book Store</h4>
+                        </div>
+                        &copy; 2022 My Book Store
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
