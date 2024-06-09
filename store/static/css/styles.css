@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1{
+    margin-top: 20px;
+    color: #232323;
+    font-size: 40px;
+    padding: 7px;
+    font-weight: 400;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    padding: 16px;
+    border-bottom: 1px solid rgb(213, 211, 211);
+}
+
+  
+
+.logo{
+    color: rgb(42, 66, 76);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 8px;
+    font-family: fantasy;
+}
+ul{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.nav-container ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.nav-container ul li a{
+    color: rgb(75, 74, 74);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.nav-container ul li a:hover{
+    color: #4b4a4a;
+    text-shadow: #1d1d1d 0px 0px 20px;
+}
+.btn_box{
+    float: right;
+    margin-left: 20%;
+    display: flex;
+}
+.nav-container .btn_box .btn a {
+    color: #d2d0d1;
+}
+.nav-container .btn_box .btn{
+    padding: 10px 20px;
+    color: #f4f4f4;
+    background-color: rgb(42, 66, 76) ;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s ;
+}
+
+.nav-container .btn_box .btn:hover{
+    background-color: rgb(214, 217, 217);
+    color: #1d1d1d;
+}
+
+
+.hero{
+    width: 90%;
+    margin: auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro{
+    width: 50%;
+    padding: 20px;
+
+}
+
+.intro p{
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+
+.intro p a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(20, 178, 206);
+}
+
+
+.image{
+    width: 50%;
+}
+
+.image img{
+    width: 350px;
+    height: 350px;
+}
+
+
+.search-form{
+    background-color: #fff;
+    margin: 30px 20px;
+    width: max-content;
+    border: 1px solid rgb(75, 74, 74);
+    border-radius: 30px;
+}
+
+.search-form input{
+    height: 35px;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search-form button{
+    height: 35px;
+    cursor: pointer;
+    background-color: rgb(42, 66, 76) ;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #d2d0d1;
+    border: none;
+}
+
+.newthings {
+    background-color: #f0f0f063; /* Grey background */
+    height: 320px;
+    padding-top: 20px;
+    text-align: center;
+}
+.newthings h1 {
+    text-align: center;
+}
+.newthings p {
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    width: 75%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 16px auto;
+}
+.newthings p  span{
+    color:  #3498db;
+}
+  
+
+/* css for footer to position it at bottom of the website and when it reaches the bottom of the page */
+
+.container5{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+.cols{
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+}
+.footer-col  ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer-col ul li{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: rgb(40, 40, 40);
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.footer{
+  background-color: rgba(245, 245, 245, 0.252);
+   padding: 25px 0;
+   margin-top: 100px;
+}
+.footer-col{
+  padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: rgb(21, 21, 21);
+  text-transform: capitalize;
+  margin:35px 0px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color:rgb(40, 40, 40);
+  display: block;
+}
+
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(213, 209, 209);
+  margin:0 8px 8px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: white;
+  background-color: black;
+  transition: 0.5s ease;
+}
+
+
+
+/* css for products page  */
+
+.box_container{
+    display: inline-block;
+    justify-content: center;
+}
+
+.card_box{
+    display:inline-block;
+    margin: 20px 20px;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.TP {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.card-body .btn {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    background-color: rgb(42, 66, 76);
+    color: #d2d0d1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-body .btn:hover {
+    background-color: rgb(213, 214, 214);
+    color: #1d1d1d;
+}
+
+
+/* css for product_detail.html page */
+
+.detail-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100vh;
+    margin:40px auto;
+}
+
+.img{
+    height: 75%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+.img img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}   
+
+.details{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.details h1{
+    width: 80%;
+    padding: 10px;
+    margin: 8px auto;
+}
+
+.details p{
+    width: 80%;
+    padding: 10px;
+    margin: 8px auto;
+}
+
+/* css for contact page */
+
+.customer-option{
+    height: 90vh;
+    width: 100vw;
+}
+.customer-option h3{
+    width: 80%;
+    padding: 10px;
+    margin: 20px auto;
+}
+.problem-container{
+    margin: auto;
+    justify-content: center;
+    width: 80%;
+    height: 90%;
+    border-bottom: 2px solid rgb(205, 199, 199);
+}
+.problem-box{
+    display: inline-block;
+    margin: 20px 10px -20px 10px ;
+    align-items: center;
+}
+.problem{
+    display: flex;
+    height: 80px;
+    width: 280px;
+    margin-top: 10px;
+    border-radius: 16px;
+    padding: 10px;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.problem img{
+    height: 95%;
+    width: 30%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid rgb(143, 142, 142);
+}
+.contact-info{
+    width: 90%;
+    margin: 40px auto;
+    height: 60vh;
+    padding: 10px;
+}
+.contact-info ul {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contact-info ul li a{
+    display: block;
+}
+
+.contact-info ul li{
+    list-style: none;
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+.contact-info p{
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+/* css for about page */
+
+.about-container{
+    width: 60vh;
+    margin: 40px auto;
+    width: 80%;
+    padding: 10px;
+    border-bottom: 2px solid rgb(205, 199, 199);
+}
+.about-container p{
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+
+.about-container p a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(20, 178, 206);
+}
+
+/* css for login.html and register.html */ 
+
+.form{
+    margin: auto;
+    width: 30vw;
+    height: 70vh;
+}
+.form h1{
+    text-align: center;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.form form button{
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #232323;
+    color: #d2d0d1;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;   
+}
+
+.form form button:hover{
+    background-color: rgb(214, 217, 217);
+    color: #1d1d1d;
+}
+
+.form form label{
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}

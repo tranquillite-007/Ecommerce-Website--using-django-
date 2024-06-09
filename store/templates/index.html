@@ -26,22 +26,26 @@
             <p>Our team is hard at work on new content,Get ready for the latest and greatest!   We're dedicated to providing you with the best experience possible <span><em>Stay tuned for more!</em></span></p>
         </div>
     </section>
-    <h1>Products</h1>
-    <div class="box_container">
-        {% for book in books %}
-        <div class="card_box">
-            <div class="card">
-                <img src="{{ MEDIA_URL }}{{ book.image.url }}" class="card-img" alt="{{ book.title }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ book.title }}</h5>
-                    <div class="TP">
-                        <p class="card-text">{{ book.author }}</p>
-                        <p class="card-text">${{ book.price }}</p>
-                    </div>
-                    <a href="{% url 'product_detail' book.pk %}" class="btn">View Details</a>
+    
+{% endblock %}
+{% block products %}
+<h1>You May Like</h1>
+<div class="box_container">
+    {% for book in books %}
+    <div class="card_box">
+        <div class="card">
+            <img src="{{ MEDIA_URL }}{{ book.image.url }}" class="card-img" alt="{{ book.title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <div class="TP">
+                    <p class="card-text">{{ book.author }}</p>
+                    <p class="card-text">${{ book.price }}</p>
                 </div>
+                <a href="{% url 'product_detail' book.pk %}" class="btn">View Details</a>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
+

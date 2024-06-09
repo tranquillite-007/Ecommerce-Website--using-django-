@@ -3,7 +3,8 @@ from django.views.generic import DetailView
 from .models import Book
 
 def index(request):
-    return render(request, 'index.html')
+    books = Book.objects.all()
+    return render(request, 'index.html' ,  {'books': books})
 
 def about(request):
     return render(request, 'about.html')

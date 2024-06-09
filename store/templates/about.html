@@ -3,8 +3,10 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-    <h1>About Us</h1>
-    <p>Welcome to our book store! We are passionate about providing a wide selection of books for all ages and interests.</p>
-    <p>Our store has been serving the community for over 10 years and we are committed to providing excellent customer service.</p>
-    <p>Feel free to browse our <a href="{% url 'products' %}">products</a> page to see what we have available.</p>
+    <div class="about-container">
+        <h1>About Us</h1>
+        <p>Welcome to our book store! We are passionate about providing a wide selection of books for all ages and interests.</p>
+        <p>Our store has been serving the community for over 10 years and we are committed to providing excellent customer service.</p>
+        <p>Feel free to browse our <a href="{% url 'products' %}"><em>products</em></a> page to see what we have available.</p>
+    </div>
 {% endblock %}
