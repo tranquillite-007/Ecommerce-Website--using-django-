@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+    <h1>Products</h1>
+    <div class="box_container">
+        {% for book in books %}
+        <div class="card_box">
+            <div class="card">
+                <img src="{{book.image.url}}" class="card-img" alt="{{ book.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <div class="TP">
+                        <p class="card-text">{{ book.author }}</p>
+                        <p class="card-text">${{ book.price }}</p>
+                    </div>
+                    <a href="{% url 'product_detail' book.pk %}" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
