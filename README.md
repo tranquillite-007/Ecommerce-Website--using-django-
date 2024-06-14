@@ -4,7 +4,6 @@ Welcome to the Book Store, an ecommerce website specializing in books. This proj
 This ecommerce website is designed to provide users with a seamless online shopping experience. The website allows users to browse through various products, add them to their cart, and checkout securely. 
 
 
-today on date 13/06/2024 i decided to create the bookstore again from scratch because the files and folders are quite meshy and 😒😒😵‍💫😵‍💫. 
 
 # Features 
 
