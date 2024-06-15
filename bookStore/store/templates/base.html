@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta_description %}
+    {% if block.super %}
+        {{ block.super }}
+    {% else %}
+        <meta name="description" content="{{ project_description }}">
+    {% endif %}
+    {% endblock %}
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <style>
         *{
@@ -71,7 +78,7 @@ ul{
 }
 .btn_box{
     float: right;
-    margin-left: 20%;
+    margin-left: 10px;
     display: flex;
 }
 .nav-container .btn_box .btn a {
@@ -93,6 +100,11 @@ ul{
     color: #1d1d1d;
 }
 
+.cart{
+    float: right;
+    margin-left: 30px;
+    color: #1d2022;
+}
 
 .hero{
     width: 90%;
@@ -278,7 +290,7 @@ ul{
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 300px;
+    height: 350px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
     padding: 10px;
@@ -372,6 +384,29 @@ ul{
     width: 80%;
     padding: 10px;
     margin: 8px auto;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 8px auto;
+}
+.btns a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(20, 178, 206);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(20, 178, 206);
+}
+
+.btns a:hover{
+    background-color: rgb(20, 178, 206);
+    color: white;
 }
 
 /* css for contact page */
@@ -470,8 +505,7 @@ ul{
 
 .form{
     margin: auto;
-    width: 30vw;
-    height: 70vh;
+    width: 50vw;
 }
 .form h1{
     text-align: center;
@@ -481,7 +515,6 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 80%;
     height: 80%;
     margin: auto;
@@ -494,7 +527,7 @@ ul{
 .form form input{
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px auto;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
 }
@@ -545,6 +578,14 @@ ul{
                 <li><a class="btn" href="{% url 'register' %}">Register</a></li>
             </div>
             {% endif %}
+            
+            <!-- cart icon -->
+            <div class="s-cart">
+                <a class="cart" href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span></a>
+            </div>
+            <!-- cart icon end -->
+
         </nav>
     </nav>
     <div class="container">
