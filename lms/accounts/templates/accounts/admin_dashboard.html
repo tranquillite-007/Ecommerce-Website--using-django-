@@ -1,0 +1,69 @@
+<!-- accounts/templates/accounts/user_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+        }
+        .nav ul li{
+            display: inline-block;
+        }
+        table{
+            width: 70%;
+            margin: auto;
+            border: 1px solid ;
+        }
+        td, tr, th {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, {{ user.username }}! This is your dashboard.</p>
+    <div class="nav">
+        <ul>
+            <li><a href="{% url 'Maintenance' %}">Maintenance</a></li>
+            <li><a href="{% url 'Report' %}">Report</a></li>
+            <li><a href="{% url 'Transaction' %}">Transaction</a></li>
+        </ul>
+    </div>
+    <h2>Product Details</h2>
+    <table>
+        <tr>
+            <th>Code No Form</th>
+            <th>Code No To</th>
+            <th>Category</th>
+        </tr>
+        <tr>
+            <td>SC(b/m)0001</td>
+            <td>sc(b/m)0001</td>
+            <td>Science</td>
+        </tr>
+        <tr>
+            <td>SC(b/m)0001</td>
+            <td>sc(b/m)0001</td>
+            <td>Eco</td>
+        </tr>
+        <tr>
+            <td>SC(b/m)0001</td>
+            <td>sc(b/m)0001</td>
+            <td>Fiction</td>
+        </tr>
+        <tr>
+            <td>SC(b/m)0001</td>
+            <td>sc(b/m)0001</td>
+            <td>English</td>
+        </tr>
+    </table>
+</body>
+</html>
