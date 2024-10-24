@@ -126,4 +126,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # login redirects for users and admin , staff members
 LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_REDIRECT_URL = '/accounts/dashboard/user/'  # Default redirect for users

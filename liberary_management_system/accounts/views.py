@@ -56,3 +56,11 @@ def report_view(request):
 
 def transaction_view(request):
     return render(request, 'accounts/transaction.html')
+
+
+@login_required
+def dashboard_view(request):
+    if request.user.is_superuser: 
+        return redirect('admin_dashboard') 
+    else:
+        return render(request, 'accounts/user_dashboard.html') 
