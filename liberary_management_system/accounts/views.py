@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth import logout
 from django.contrib import messages
 from .forms import LoginForm
 
@@ -64,3 +64,9 @@ def dashboard_view(request):
         return redirect('admin_dashboard') 
     else:
         return render(request, 'accounts/user_dashboard.html') 
+    
+
+def custom_logout_view(request):
+    logout(request)  # Log out the user
+    messages.success(request, "You have been logged out successfully.")
+    return redirect('login')
